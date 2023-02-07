@@ -28,12 +28,21 @@ function myFunction() {
     document.getElementById("result").innerHTML = x;
 }
 
+function changeName(side) {
+    let value = document.getElementById(`${side}PersonNameInput`).value;
+    document.getElementById(`${side}PersonCommentName`).innerText = value;
+
+    if (side == "right") {
+        document.getElementById(`inRelationWith`).innerText = `W związku z ${value}`;
+    }
+}
+
 function loadImage(side) {
 //     let person = this.people.filter(p => p.side == side)[0];
 //     person.imgUrl = URL.createObjectURL(document.getElementById(`${side}PersonImageInput`).files[0]);
     let url = URL.createObjectURL(document.getElementById(`${side}PersonImageInput`).files[0]);
     document.getElementById(`${side}SidePhoto`).src = url;
-    document.getElementById(`${side}SideCommentPhoto`).src = url;
+    document.getElementById(`${side}SideCommentPhoto`).attributes.getNamedItem("xlink:href").value = url;
 
     // var leftSidePhotoElement = document.getElementById("leftPersonImageInput").files[0];
     // var reader = new FileReader();
