@@ -11113,7 +11113,7 @@ facebook .system-fonts--body.mac {
 }
 
 .x1iorvi4 {
-    padding-top: 4px
+    padding-top: 7px
 }
 
 .x1ip0gqz {
@@ -38340,7 +38340,8 @@ facebook .system-fonts--body.mac {
 }
 
 .xwnonoy {
-    background-color: var(--accent)
+    /* background-color: var(--accent); */
+    background-image: url("serduszka.jpg");
 }
 
 .xwnsf4a {
@@ -55469,7 +55470,7 @@ div.uiContextualLayerPositionerFixed {
     --dataviz-supplementary-4: rgb(228, 230, 235);
 }
 
-</style><style nonce="">.crhKlDoi.crhKlDoi {
+.crhKlDoi.crhKlDoi {
     position: absolute;
 }
 
