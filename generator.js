@@ -1,12 +1,3 @@
-// const source = document.getElementById('source');
-// const result = document.getElementById('result');
-
-// const inputHandler = function(e) {
-//   result.innerHTML = e.target.value;
-// }
-
-// source.addEventListener('input', inputHandler);
-// source.addEventListener('propertychange', inputHandler); // for IE8
 class Person {
     constructor(side, nameAndSurname, imgUrl, declinedNameAndSurname) {
         this.side = side;
@@ -16,43 +7,31 @@ class Person {
     }
 }
 
-var people = [
-    new Person("left", null, "Anonka Kowalska"),
-    new Person("right", null, "Anon Pawłowski"),
-].forEach(person => {
-    document.getElementById("people-list").innerHTML += `<p>${person.nameAndSurname}</p>`
-});
+document.getElementById(`leftPersonNameInput`).value = "Bartek Anon";
+document.getElementById(`rightPersonNameInput`).value = "Michał Anon";
+changeName("left");
+changeName("right");
 
-function myFunction() {
-    var x = document.getElementById("source").value;
-    document.getElementById("result").innerHTML = x;
-}
+// var people = [
+//     new Person("left", null, "Anonka Kowalska"),
+//     new Person("right", null, "Anon Pawłowski"),
+// ].forEach(person => {
+//     document.getElementById("people-list").innerHTML += `<p>${person.nameAndSurname}</p>`
+// });
 
 function changeName(side) {
     let value = document.getElementById(`${side}PersonNameInput`).value;
     document.getElementById(`${side}PersonCommentName`).innerText = value;
 
     if (side == "right") {
-        document.getElementById(`inRelationWith`).innerText = `W związku z ${value}`;
+        document.getElementById(`inRelationWith`).innerHTML = `W związku z ${value}`;
     }
 }
 
 function loadImage(side) {
-//     let person = this.people.filter(p => p.side == side)[0];
-//     person.imgUrl = URL.createObjectURL(document.getElementById(`${side}PersonImageInput`).files[0]);
     let url = URL.createObjectURL(document.getElementById(`${side}PersonImageInput`).files[0]);
     document.getElementById(`${side}SidePhoto`).src = url;
     document.getElementById(`${side}SideCommentPhoto`).attributes.getNamedItem("xlink:href").value = url;
-
-    // var leftSidePhotoElement = document.getElementById("leftPersonImageInput").files[0];
-    // var reader = new FileReader();
-    // reader.onload = function(e) {
-    //     const blobImage = new Blob([reader.result]);
-    //     const url = URL.createObjectURL(blob, {type: "image/png"});
-    //     document.getElementById("leftSidePhoto").src = url;
-    // }
-    // reader.readAsArrayBuffer(image);
-    // reader.readAsDataURL(image);
 }
 
 function toImage() {
