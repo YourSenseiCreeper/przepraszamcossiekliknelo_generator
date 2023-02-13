@@ -40719,6 +40719,26 @@ facebook .system-fonts--body.mac {
     .x10i7btf.x10i7btf {
         margin-top: 0
     }
+
+    .x1htk8sl {
+        min-width: 95vw !important;
+    }
+
+    .x8vdgqj {
+        margin-left: 0px !important;
+    }
+
+    .x1iymm2a {
+        margin-bottom: 0px !important;
+    }
+
+    .xw7yly9 {
+        margin-top: 8px !important;
+    }
+
+    .x1gja9t {
+        margin-right: 0px !important;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -41937,7 +41957,8 @@ facebook .system-fonts--body.mac {
 
 @media (min-height: 790px) {
     .x18vph2k.x18vph2k {
-        max-width: 680px
+        /* max-width: 680px */
+        min-width: 95vw;
     }
 }
 
@@ -42444,7 +42465,8 @@ facebook .system-fonts--body.mac {
 
 @media (min-height: 790px) {
     .x1ceravr.x1ceravr {
-        width: 680px
+        /* width: 680px */
+        max-width: 90vw !important;
     }
 }
 
@@ -55608,3 +55630,4 @@ div.uiContextualLayerPositionerFixed {
     gap: 5px;
     align-items: center;
 }
+
