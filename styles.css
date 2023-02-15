@@ -42588,7 +42588,8 @@ facebook .system-fonts--body.mac {
 
 @media (min-height: 700px) and (max-height: 789px) {
     .x1db0b2.x1db0b2 {
-        height: 590px
+        /* height: 590px */
+        max-width: 90vw !important;
     }
 }
 
@@ -49674,7 +49675,12 @@ facebook .system-fonts--body.mac {
 
 @media (min-height: 700px) and (max-height: 789px) {
     .xq1tmr.xq1tmr {
-        width: 590px
+        /* width: 590px; */
+        max-width: 90vw !important;
+    }
+
+    .generator {
+        max-width: 90vw !important;
     }
 }
 
